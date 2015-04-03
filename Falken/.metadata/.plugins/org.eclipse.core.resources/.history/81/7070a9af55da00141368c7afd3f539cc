@@ -1,0 +1,11 @@
+
+public class weow {
+	public static void main (String args[]){	
+		double turbo;
+		turbo = 5.28;
+		
+		
+		System.out.print("turbo");
+		
+	}
+}
