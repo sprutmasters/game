@@ -1,5 +1,8 @@
 package game;
 
-public class ID {
+public enum ID {
 
+	Player(),
+	Enemy();
+	
 }
