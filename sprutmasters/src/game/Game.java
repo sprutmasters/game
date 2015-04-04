@@ -33,9 +33,9 @@ public class Game extends Canvas implements Runnable{
 		
 		r = new Random();
 		
-		handler.addObject(new Player(200,100, ID.Player));
-		for(int i = 0; i<15; i++){
-			handler.addObject(new Zombie(r.nextInt(WIDTH -40), r.nextInt(HEIGHT -40), ID.Zombie));
+		handler.addObject(new Player(200,100, ID.Player, handler));
+		for(int i = 0; i<25; i++){
+			handler.addObject(new Zombie(r.nextInt(WIDTH -40), r.nextInt(HEIGHT -40), ID.Zombie, handler));
 		}
 	}
 	

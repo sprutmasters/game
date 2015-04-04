@@ -10,7 +10,6 @@ public class HUD {
 	public static String str = "GAME OVER!";
 	
 	public void tick(){
-		HEALTH --;
 		HEALTH = Game.clamp(HEALTH, 0, 100);
 		
 		
