@@ -1,0 +1,23 @@
+
+
+//package tilegame.gfx;
+
+//public class Spritelist {
+
+	
+	
+	
+	
+	//Grass
+	//g.drawImage(sheet.crop(0, 0, 32, 32), 5, 5, null);
+	
+	//DIRT
+	//g.drawImage(sheet.crop(32, 0, 32, 32), 5, 5, null);
+
+	//DIRT2
+	//g.drawImage(sheet.crop(64, 0, 32, 32), 5, 5, null);
+	
+	
+	
+	
+//}
