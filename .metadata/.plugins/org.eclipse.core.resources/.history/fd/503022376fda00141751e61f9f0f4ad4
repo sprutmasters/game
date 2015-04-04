@@ -1,0 +1,12 @@
+package tilegame.main;
+
+import tilegame.display.Display;
+
+public class Launcher {
+	
+	public static void main(String[] args){
+		new Display("WEOW", 300, 300);
+	}
+
+
+}
