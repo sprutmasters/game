@@ -2,9 +2,7 @@ package tilegame.main;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
-
 import tilegame.display.Display;
-import tilegame.gfx.Assets;
 import tilegame.gfx.ImageLoader;
 import tilegame.gfx.SpriteSheet;
 
@@ -31,7 +29,6 @@ import tilegame.gfx.SpriteSheet;
 	
 	private void init(){		
 		display = new Display(title, width, height);
-		Assets.init();
 		
 		
 	}
@@ -51,7 +48,7 @@ import tilegame.gfx.SpriteSheet;
 		g.clearRect(0, 0, width, height);
 		//DRAW HERE (Tile x, Tile y, 32, 32), x, y
 		
-		g.drawImage(Assets.dirt, 10, 10, null);
+		
 	
 	
 		
@@ -65,23 +62,9 @@ import tilegame.gfx.SpriteSheet;
 	public void run(){		
 		init();
 		
-		int fps = 144;
-		double timePerTick = 1000000000 / fps;
-		double delta = 0;
-		long now;
-		long lastTime = System.nanoTime();
-		
 		while(running){
-			now = System.nanoTime();
-			delta+= (now - lastTime) / timePerTick;
-			lastTime = now;
-			
-			if(delta >= 1){
-				tick();
-				render();
-				delta --;
-			}
-			
+			tick();
+			render();
 			
 		}
 		

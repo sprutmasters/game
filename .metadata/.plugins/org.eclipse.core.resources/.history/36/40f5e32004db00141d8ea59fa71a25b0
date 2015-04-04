@@ -72,16 +72,8 @@ import tilegame.gfx.SpriteSheet;
 		long lastTime = System.nanoTime();
 		
 		while(running){
-			now = System.nanoTime();
-			delta+= (now - lastTime) / timePerTick;
-			lastTime = now;
-			
-			if(delta >= 1){
-				tick();
-				render();
-				delta --;
-			}
-			
+			tick();
+			render();
 			
 		}
 		

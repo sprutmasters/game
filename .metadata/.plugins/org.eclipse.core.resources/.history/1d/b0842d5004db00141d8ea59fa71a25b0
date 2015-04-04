@@ -76,12 +76,8 @@ import tilegame.gfx.SpriteSheet;
 			delta+= (now - lastTime) / timePerTick;
 			lastTime = now;
 			
-			if(delta >= 1){
-				tick();
-				render();
-				delta --;
-			}
-			
+			tick();
+			render();
 			
 		}
 		
