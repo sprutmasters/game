@@ -12,7 +12,8 @@ public class Player extends GameObject {
 	}
 
 	public void tick() {
-		
+		x += vX;
+		y += vY;
 				
 	}
 
