@@ -1,0 +1,5 @@
+package tilegame.main.input;
+
+public class KeyManager {
+
+}

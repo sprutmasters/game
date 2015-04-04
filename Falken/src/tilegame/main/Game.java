@@ -7,6 +7,7 @@ import tilegame.display.Display;
 import tilegame.gfx.Assets;
 import tilegame.gfx.ImageLoader;
 import tilegame.gfx.SpriteSheet;
+import tilegame.main.input.KeyManager;
 import tilegame.main.states.GameState;
 import tilegame.main.states.MenuState;
 import tilegame.main.states.State;
@@ -25,29 +26,34 @@ import tilegame.main.states.State;
 		//States
 		private State gameState;
 		private State menuState;
-
-	
+		
+		//INPUT
+		private KeyManager keyManager;
 	
 	
 	public Game(String title, int width, int height){		
 		this.width = width;
 		this.height = height;
 		this.title = title;
+		keyManager = new KeyManager();
 		
 	}
 	
 	private void init(){		
 		display = new Display(title, width, height);
+		display.getFrame().addKeyListener(keyManager);
 		Assets.init();
 		
-		gameState = new GameState();
-		menuState = new MenuState();
+		gameState = new GameState(this);
+		menuState = new MenuState(this);
 		State.setState(gameState);
 		
 		
 	}
 	
 	private void tick(){
+		keyManager.tick();
+		
 		if(State.getState() != null)
 			State.getState().tick();
 		
@@ -106,6 +112,10 @@ import tilegame.main.states.State;
 		stop();
 	}
 	
+	public KeyManager getKeyManager(){
+		return keyManager;
+	}
+	
 	public synchronized void start(){
 		if(running)
 			return;
@@ -124,6 +134,22 @@ import tilegame.main.states.State;
 			e.printStackTrace();
 		}
 		
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
 	}
 }
 	

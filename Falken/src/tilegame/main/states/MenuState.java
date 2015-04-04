@@ -2,9 +2,12 @@ package tilegame.main.states;
 
 import java.awt.Graphics;
 
+import tilegame.main.Game;
+
 public class MenuState extends State{
 
-	public MenuState(){
+	public MenuState(Game game){
+		super(game);
 		
 	}
 	

@@ -1,0 +1,31 @@
+package tilegame.main.input;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class KeyManager implements KeyListener {
+
+	
+	private boolean[] keys;
+	public KeyManager(){
+		keys = new boolean[256];
+	}
+	@Override
+	public void keyPressed(KeyEvent arg0) {
+		
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent arg0) {
+	
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent arg0) {
+		
+	}
+	
+
+}

@@ -3,17 +3,29 @@ package tilegame.main.entities.creatures;
 import java.awt.Graphics;
 
 import tilegame.gfx.Assets;
+import tilegame.main.Game;
 
 public class Player extends Creature{
 
-	public Player(float x, float y) {
+	private Game game;
+	
+	
+	public Player(Game game, float x, float y) {
 		super(x, y);
+		this.game = game;
 		
 	}
 
 	@Override
 	public void tick() {
-		// TODO Auto-generated method stub
+		if(game.getKeyManager().up)
+			y -= 0.5;
+		if(game.getKeyManager().down)
+			y += 0.5;
+		if(game.getKeyManager().left)
+			x -= 0.5;
+		if(game.getKeyManager().right)
+			x += 0.5;
 		
 	}
 
