@@ -8,7 +8,6 @@ import tilegame.gfx.Assets;
 import tilegame.gfx.ImageLoader;
 import tilegame.gfx.SpriteSheet;
 import tilegame.main.states.GameState;
-import tilegame.main.states.MenuState;
 import tilegame.main.states.State;
 
 	public class Game implements Runnable{
@@ -24,7 +23,7 @@ import tilegame.main.states.State;
 		
 		//States
 		private State gameState;
-		private State menuState;
+		private state menuState;
 
 	
 	

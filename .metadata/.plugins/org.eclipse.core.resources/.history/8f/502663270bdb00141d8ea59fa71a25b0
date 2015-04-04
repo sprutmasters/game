@@ -1,0 +1,5 @@
+package tilegame.main.entities;
+
+public class Entity {
+
+}

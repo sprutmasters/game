@@ -24,7 +24,7 @@ import tilegame.main.states.State;
 		
 		//States
 		private State gameState;
-		private State menuState;
+		private state menuState;
 
 	
 	

@@ -1,0 +1,5 @@
+package tilegame.main.entities.creatures;
+
+public class Creatures {
+
+}

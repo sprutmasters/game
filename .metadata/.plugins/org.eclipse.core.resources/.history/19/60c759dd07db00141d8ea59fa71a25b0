@@ -1,0 +1,5 @@
+package tilegame.main.states;
+
+public class GameState extends State{
+
+}

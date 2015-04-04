@@ -8,7 +8,6 @@ import tilegame.gfx.Assets;
 import tilegame.gfx.ImageLoader;
 import tilegame.gfx.SpriteSheet;
 import tilegame.main.states.GameState;
-import tilegame.main.states.MenuState;
 import tilegame.main.states.State;
 
 	public class Game implements Runnable{
@@ -24,7 +23,6 @@ import tilegame.main.states.State;
 		
 		//States
 		private State gameState;
-		private State menuState;
 
 	
 	
@@ -41,15 +39,13 @@ import tilegame.main.states.State;
 		Assets.init();
 		
 		gameState = new GameState();
-		menuState = new MenuState();
 		State.setState(gameState);
 		
 		
 	}
 	
 	private void tick(){
-		if(State.getState() != null)
-			State.getState().tick();
+		if()
 		
 	}
 	
@@ -63,9 +59,6 @@ import tilegame.main.states.State;
 		//CLEAR SCREEN
 		g.clearRect(0, 0, width, height);
 		//DRAW HERE (Tile x, Tile y, 32, 32), x, y
-		
-		if(State.getState() != null)
-			State.getState().render(g);
 		
 		//END DRAWING
 		bs.show();
