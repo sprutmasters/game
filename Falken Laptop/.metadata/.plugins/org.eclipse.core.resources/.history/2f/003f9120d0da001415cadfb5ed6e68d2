@@ -43,11 +43,6 @@
 	//WOOD DARK
 	//g.drawImage(sheet.crop(288, 0, 32, 32), 5, 5, null);
 
-	//MOSSY TREE
-	//g.drawImage(sheet.crop(320, 0, 32, 32), 5, 5, null);
-
-	//TEMPLATE
-
 	
 
 	
