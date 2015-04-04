@@ -18,27 +18,17 @@ public class Player extends Creature{
 
 	@Override
 	public void tick() {
-		getInput();
-		move();
-		
-	}
-	private void getInput(){
-		xMove = 0;
-		yMove = 0;
-		
 		if(game.getKeyManager().up)
-			yMove = -speed;
+			y -= 1;
 		if(game.getKeyManager().down)
-			yMove = speed;
+			y += 1;
 		if(game.getKeyManager().left)
-			xMove = -speed;
+			x -= 1;
 		if(game.getKeyManager().right)
-			xMove = speed;
-		
+			x += 1;
 		
 	}
-	
-	
+
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(Assets.player, (int) x, (int) y, width, height, null);

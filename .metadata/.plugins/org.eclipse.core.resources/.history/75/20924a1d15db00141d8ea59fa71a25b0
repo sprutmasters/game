@@ -21,18 +21,9 @@ public abstract class Creature extends Entity {
 		xMove = 0;
 		yMove = 0;
 		
-		
+		//GETTERS AND SETTERS
 	}
-	public void move(){
-		x += xMove;
-		y += yMove;
-	}
-	
-	
-	
-	
-	
-	//GETTERS AND SETTERS
+
 	public float getxMove() {
 		return xMove;
 	}
