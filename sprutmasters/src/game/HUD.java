@@ -7,10 +7,13 @@ public class HUD {
 
 	
 	public static int HEALTH = 100;
+	public static String str = "GAME OVER!";
 	
 	public void tick(){
 		HEALTH --;
 		HEALTH = Game.clamp(HEALTH, 0, 100);
+		
+		
 	}
 	
 	public void render(Graphics g){
@@ -20,5 +23,6 @@ public class HUD {
 		g.fillRect(15, 15, HEALTH * 2, 32);
 		g.setColor(Color.lightGray);
 		g.drawRect(15, 15, 200, 32);
+		
 	}
 }
