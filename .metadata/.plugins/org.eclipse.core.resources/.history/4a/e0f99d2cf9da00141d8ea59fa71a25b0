@@ -46,9 +46,8 @@ import tilegame.gfx.SpriteSheet;
 		g = bs.getDrawGraphics();
 		//CLEAR SCREEN
 		g.clearRect(0, 0, width, height);
-		//DRAW HERE (Tile x, Tile y, 32, 32), x, y
-		g.drawImage(sheet.crop(32, 0, 32, 32), 0, 0, null);
-	
+		//DRAW HERE
+		g.drawImage(sheet.crop(32, 0, 32, 32), 5, 5, null);
 	
 		
 		

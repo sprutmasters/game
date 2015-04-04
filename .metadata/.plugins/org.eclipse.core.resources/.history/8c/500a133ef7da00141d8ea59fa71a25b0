@@ -2,22 +2,24 @@ package tilegame.main;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
+
 import tilegame.display.Display;
 import tilegame.gfx.ImageLoader;
 import tilegame.gfx.SpriteSheet;
 
-	public class Game implements Runnable{
+public class Game implements Runnable{
 
-		public int width, height;
-		public String title;
+	private Display display;
+	public int width, height;
+	public String title;
 	
-		private boolean running = false;
-		private Display display;
-		private Thread thread;
-		private BufferStrategy bs;
-		private Graphics g;
-		private BufferedImage test;
-		private SpriteSheet sheet;
+	private boolean running = false;
+	private Thread thread;
+	
+	private BufferStrategy bs;
+	private Graphics g;
+	private BufferedImage test;
+	private SpriteSheet sheet;
 	
 	
 	public Game(String title, int width, int height){
@@ -46,9 +48,8 @@ import tilegame.gfx.SpriteSheet;
 		g = bs.getDrawGraphics();
 		//CLEAR SCREEN
 		g.clearRect(0, 0, width, height);
-		//DRAW HERE (Tile x, Tile y, 32, 32), x, y
-		g.drawImage(sheet.crop(32, 0, 32, 32), 0, 0, null);
-	
+		//DRAW HERE
+		g.drawImage(sheet.crop(32, 0, 32, 32), 5, 5, null);
 	
 		
 		

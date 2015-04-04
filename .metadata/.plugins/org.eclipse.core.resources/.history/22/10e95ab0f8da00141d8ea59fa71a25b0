@@ -2,6 +2,7 @@ package tilegame.gfx;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+
 import javax.imageio.ImageIO;
 
 public class ImageLoader {
@@ -13,7 +14,6 @@ public class ImageLoader {
 			e.printStackTrace();
 			System.exit(1);
 		}
-		
 		return null;
 	}
 
