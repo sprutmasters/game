@@ -4,6 +4,7 @@ import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
+import java.util.Random;
 
 public class Game extends Canvas implements Runnable{
 
@@ -11,12 +12,14 @@ public class Game extends Canvas implements Runnable{
 	private static final long serialVersionUID = -4584388369897487885L;
 	
 	public static final int WIDTH = 1920;
-	public static final int HEIGHT = WIDTH/12*9;
+	public static final int HEIGHT = 1080;
 	
 	private Thread thread;
 	private boolean running = false;
 	
+	private Random r;
 	private Handler handler;
+	private HUD hud;
 	
 	public Game(){
 		handler = new Handler();
@@ -26,7 +29,14 @@ public class Game extends Canvas implements Runnable{
 		
 		new Window(WIDTH, HEIGHT, "Sprutmasters", this);
 		
+		hud = new HUD();
+		
+		r = new Random();
+		
 		handler.addObject(new Player(200,100, ID.Player));
+		for(int i = 0; i<15; i++){
+			handler.addObject(new Zombie(r.nextInt(WIDTH -40), r.nextInt(HEIGHT -40), ID.Zombie));
+		}
 	}
 	
 	public synchronized void start(){
@@ -77,6 +87,7 @@ public class Game extends Canvas implements Runnable{
 	
 	private void tick(){
 		handler.tick();
+		hud.tick();
 	}
 	
 	private void render(){
@@ -92,9 +103,20 @@ public class Game extends Canvas implements Runnable{
 		g.fillRect(0, 0, WIDTH, HEIGHT);
 		
 		handler.render(g);
+		hud.render(g);
 		
 		g.dispose();
 		bs.show();
+	}
+	
+	public static int clamp(int var, int min, int max){
+		if(var >= max){
+			return var = max;
+		}else if(var <= min){
+			return var = min;
+		}else{
+			return var;
+		}
 	}
 	
 	public static void main(String args[]){
