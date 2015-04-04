@@ -1,0 +1,20 @@
+package tilegame.main.entities.creatures;
+
+import tilegame.main.entities.Entity;
+
+public abstract class Creature extends Entity {
+
+	public static final int DEFAULT_HEALTH = 10;
+	
+	protected int health;
+	
+	public Creature(float x, float y, int width, int height) {
+		super(x, y, width, height);
+		health = DEFAULT_HEALTH;
+		
+		
+		
+	}
+
+	
+}
