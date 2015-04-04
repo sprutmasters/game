@@ -65,7 +65,7 @@ import tilegame.gfx.SpriteSheet;
 	public void run(){		
 		init();
 		
-		int fps = 144;
+		int fps = 60;
 		double timePerTick = 1000000000 / fps;
 		double delta = 0;
 		long now;
