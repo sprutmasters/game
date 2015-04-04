@@ -7,6 +7,9 @@ public class KeyInput extends KeyAdapter {
 	
 	private Handler handler;
 	
+	public int yspeed = 1;
+	public int xspeed = 1;
+	
 	
 	public KeyInput(Handler handler){
 		this.handler = handler;
@@ -21,17 +24,34 @@ public class KeyInput extends KeyAdapter {
 			if(tempObject.getID() == ID.Player){
 				//Key events for player 1
 				
+				
 				if(key == KeyEvent.VK_W){
-					tempObject.setY(tempObject.getY() - 1);
+					if(yspeed>-1){
+						yspeed = -1;
+					}
+					tempObject.setY(tempObject.getY() + yspeed);
+					yspeed -= 1;
 				}
 				if(key == KeyEvent.VK_S){
-					tempObject.setY(tempObject.getY() + 1);
+					if(yspeed<1){
+						yspeed = 1;
+					}
+					tempObject.setY(tempObject.getY() + yspeed);
+					yspeed += 1;
 				}
 				if(key == KeyEvent.VK_A){
-					tempObject.setX(tempObject.getX() - 1);
+					if(xspeed>-1){
+						xspeed = -1;
+					}
+					tempObject.setX(tempObject.getX() + xspeed);
+					xspeed -=1;
 				}
 				if(key == KeyEvent.VK_D){
-					tempObject.setX(tempObject.getX() + 1);
+					if(xspeed<1){
+						xspeed = 1;
+					}
+					tempObject.setX(tempObject.getX() + xspeed);
+					xspeed += 1;
 				}
 			}
 		}
