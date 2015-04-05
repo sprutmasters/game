@@ -142,6 +142,8 @@ public abstract class MapObject {
 			if(topRight || bottomRight){
 				dx = 0;
 				xtemp = (currentCol + 1) * tileSize - cwidth / 2;
+			}else{
+				xtemp += dx;
 			}
 		}
 		if(!falling){
