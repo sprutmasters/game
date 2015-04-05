@@ -19,6 +19,7 @@ public class MenuState extends GameState {
 	
 	private Color titleColor;
 	private Font titleFont;
+	private Color invisColor;
 	
 	private Font font;
 	
@@ -30,6 +31,7 @@ public class MenuState extends GameState {
 			bg.setVector(-0.1, 0);
 			
 			titleColor = new Color(128, 128, 0);
+			invisColor = new Color(0,0,0);
 			titleFont = new Font("Century Gothic", Font.PLAIN, 80);
 			
 			font = new Font("Arial", Font.PLAIN, 30);
@@ -60,10 +62,13 @@ public class MenuState extends GameState {
 		for(int i = 0; i < options.length; i++){
 			if(i == currentChoice){
 				g.setColor(Color.gray);
+				g.drawString(">>",1920/2-120, 700+(i*40));
 			}else{
 				g.setColor(Color.black);
 			}
 			g.drawString(options[i], 1920/2 -80, 700 + (i*40));
+			
+			
 		}
 		
 		
