@@ -7,8 +7,26 @@ public class MenuState extends GameState {
 
 	private Background bg;
 	
+	private String[] options = {
+			"Start",
+			"Quit"
+	};
+	
+	private Color titleColor;
+	private Font titleFont;
+	
+	private Font font;
+	
 	public MenuState(GameStateManager gsm){
 		this.gsm = gsm;
+		
+		try{
+			bg = new Background("", 1);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		
 	}
 	
 	public void init(){
