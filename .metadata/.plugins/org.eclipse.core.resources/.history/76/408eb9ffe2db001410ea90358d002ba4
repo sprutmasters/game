@@ -73,7 +73,7 @@ public class MenuState extends GameState {
 		
 		
 	}
-			//MENU BUTTONS
+	
 	private void select(){
 		if(currentChoice == 0){
 			//START

@@ -73,14 +73,13 @@ public class MenuState extends GameState {
 		
 		
 	}
-			//MENU BUTTONS
+	
 	private void select(){
 		if(currentChoice == 0){
-			//START
 			
 		}
 		if(currentChoice == 1){
-			//HELP
+			//Help
 		}
 		if(currentChoice == 2){
 			System.exit(0);
