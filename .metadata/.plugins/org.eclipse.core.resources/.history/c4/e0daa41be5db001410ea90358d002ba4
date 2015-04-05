@@ -1,0 +1,11 @@
+package GameState;
+
+public class Worldstate {
+	
+	public Worldstate(GameStateManager gsm){
+		
+		
+		
+	}
+
+}

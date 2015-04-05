@@ -75,17 +75,14 @@ public class MenuState extends GameState {
 	}
 			//MENU BUTTONS
 	private void select(){
-		//START
 		if(currentChoice == 0){
 			gsm.setState(GameStateManager.WORLDSTATE);
-			
+			//START
 			
 		}
-		//HELP
 		if(currentChoice == 1){
-			
+			//HELP
 		}
-		//EXIT
 		if(currentChoice == 2){
 			System.exit(0);
 		}
