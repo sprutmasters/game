@@ -2,36 +2,42 @@ package GameState;
 
 import java.awt.Graphics2D;
 
+import TileMap.Tile;
+import TileMap.TileMap;
+
 public class Worldstate extends GameState {
+	
+	private TileMap tilemap;
 	
 	public Worldstate(GameStateManager gsm){
 		this.gsm = gsm;
 		
 		
 	}
-
+	
 	public void init() {
-		// TODO Auto-generated method stub
 		
+		tilemap = new TileMap(30);
+	
 	}
 
 	public void update() {
-		// TODO Auto-generated method stub
+	
 		
 	}
 
 	public void draw(Graphics2D g) {
-		// TODO Auto-generated method stub
+	
 		
 	}
 
 	public void keyPressed(int k) {
-		// TODO Auto-generated method stub
+
 		
 	}
 
 	public void keyReleased(int k) {
-		// TODO Auto-generated method stub
+
 		
 	}
 

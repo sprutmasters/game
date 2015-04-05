@@ -1,0 +1,25 @@
+package TileMap;
+
+import java.awt.*;
+import java.awt.image.*;
+
+import java.io.*;
+import javax.imageio.ImageIO;
+
+
+public class tilemap {
+	
+	//Horizontal cordinates
+	private double x;
+	
+	//Vertical cordinates
+	private double y;
+	
+	//Min Bounds
+	private int xmin;
+	private int ymin;
+	//Max Bounds
+	private int xmax;
+	private int ymax;
+
+}
