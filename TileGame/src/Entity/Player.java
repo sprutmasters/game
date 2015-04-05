@@ -1,5 +1,6 @@
 package Entity;
 
-public class Player {
+public class Player extends MapObject{
 
+	
 }
