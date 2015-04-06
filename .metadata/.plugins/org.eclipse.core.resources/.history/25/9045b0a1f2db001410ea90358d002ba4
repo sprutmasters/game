@@ -74,7 +74,9 @@ public class TileMap {
 			tiles[1][col] = new Tile(subimage, Tile.BLOCKED);
 			
 		}
-		
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
 		
@@ -108,11 +110,7 @@ public class TileMap {
 		
 		
 	}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-}
+	
 	
 
 
