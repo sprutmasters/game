@@ -13,6 +13,7 @@ public class Worldstate extends GameState {
 	
 	public Worldstate(GameStateManager gsm){
 		this.gsm = gsm;
+		init();
 		
 		
 	}
