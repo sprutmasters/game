@@ -134,7 +134,7 @@ public class TileMap {
 		public void setPosition(double x, double y){
 			
 			
-			//TWEEN POSITION TRACKING									
+			TWEEN POSITION TRACKING									
 			this.x += (x - this.x) * tween;
 			this.y += (y - this.x) * tween;
 			

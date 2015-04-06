@@ -20,7 +20,7 @@ public class Worldstate extends GameState {
 	public void init() {
 		
 		tilemap = new TileMap(30);
-		tilemap.loadTiles("/res/textures/testtileset.gif");
+		tilemap.loadTiles("/res/textures/tiles1.png");
 		tilemap.loadMap("res/Maps/testlevel.map");
 		tilemap.setPosition(0, 0);
 	
