@@ -77,7 +77,7 @@ public class MenuState extends GameState {
 	private void select(){
 		//START
 		if(currentChoice == 0){
-			gsm.setState(GameStateManager.WORLDSTATE);
+			gsm.setState(GameStateManager.getWorldstate());
 			
 			
 		}
@@ -95,13 +95,13 @@ public class MenuState extends GameState {
 		if(k == KeyEvent.VK_ENTER){
 			select();
 		}
-		if(k == KeyEvent.VK_UP){
+		if(k == KeyEvent.VK_W){
 			currentChoice--;
 			if(currentChoice == -1){
 				currentChoice = 0;
 			}
 		}
-		if(k == KeyEvent.VK_DOWN){
+		if(k == KeyEvent.VK_S){
 			currentChoice++;
 			if(currentChoice == options.length){
 				currentChoice = options.length -1;

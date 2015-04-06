@@ -1,7 +1,9 @@
 package GameState;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 
+import tileGame.GamePanel;
 import TileMap.Tile;
 import TileMap.TileMap;
 
@@ -18,6 +20,9 @@ public class Worldstate extends GameState {
 	public void init() {
 		
 		tilemap = new TileMap(30);
+		tilemap.loadTiles("/res/textures/tiles1.png");
+		tilemap.loadMap("/Maps/level1-1.map");
+		tilemap.setPosition(0, 0);
 	
 	}
 
@@ -27,6 +32,13 @@ public class Worldstate extends GameState {
 	}
 
 	public void draw(Graphics2D g) {
+		
+		//Clear Screen
+		g.setColor(Color.WHITE);
+		g.fillRect(0, 0, GamePanel.WIDTH, GamePanel.HEIGHT);
+		
+		//Draw Tiles
+		tilemap.draw(g);
 	
 		
 	}
